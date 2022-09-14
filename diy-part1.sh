@@ -18,6 +18,10 @@
 # echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 # echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
 
-cd package/lean
-rm -rf luci-app-ikoolproxy
-git clone https://github.com/yaof2/luci-app-ikoolproxy.git package/lean
+rm -rf package/lean/luci-app-ikoolproxy
+git clone https://github.com/yaof2/luci-app-ikoolproxy.git package/lean/luci-app-ikoolproxy.git
+
+# rm -rf package/feeds/luci/luci-theme-argon
+# git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/feeds/luci/luci-theme-argon
+# git clone https://github.com/jerrykuku/luci-app-argon-config.git package/lean/luci-app-argon-config
+# echo '### Argon Theme Config ###'
