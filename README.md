@@ -1,5 +1,5 @@
 # My-build-K2P
-# OpenWrt固件
+seed.config without luci-app-mtwifi
   
 默认地址192.168.2.1
 
