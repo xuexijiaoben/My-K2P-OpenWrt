@@ -25,3 +25,6 @@ git clone https://github.com/yaof2/luci-app-ikoolproxy.git package/lean/luci-app
 # git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/feeds/luci/luci-theme-argon
 # git clone https://github.com/jerrykuku/luci-app-argon-config.git package/lean/luci-app-argon-config
 # echo '### Argon Theme Config ###'
+
+./scripts/feeds update -a
+./scripts/feeds install -a
