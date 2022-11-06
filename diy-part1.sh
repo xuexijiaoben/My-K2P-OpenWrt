@@ -18,6 +18,9 @@
 # echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 # echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
 
+# 目前兼容Luci18
+# echo 'ssrc-git opentopd  https://github.com/sirpdboy/luci-theme-opentopd' >>feeds.conf.default
+
 rm -rf package/lean/luci-app-ikoolproxy
 rm -rf package/lean/luci-app-ikoolproxy2
 git clone https://github.com/ilxp/luci-app-ikoolproxy2.git package/lean/luci-app-ikoolproxy
