@@ -12,6 +12,8 @@ https://github.com/Lancenas/Actions-Lean-OpenWrt
 
 https://www.moewah.com/archives/4003.html
 
+https://github.com/caonimagfw/Actions-OpenWrt
+
 # Actions-Lean-OpenWrt
 
 - `main`是[coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)编译.
