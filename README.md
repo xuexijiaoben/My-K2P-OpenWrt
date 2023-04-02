@@ -26,3 +26,8 @@ https://github.com/caonimagfw/Actions-OpenWrt
 - 另外如果，使用“files 大法”仓库最好设为私有，否则你的配置信息，如宽带账号等会公开在网上。
 - 如果需要可以编写多个`workflows`文件对应`###.config`，开启多流程同时编译。
 - 在 Actions 页面选择Build OpenWrt，然后点击Run Workflow按钮，即可开始编译。（如果需要 SSH 连接则把SSH connection to Actions的值改为true)
+
+
+LEDE
+目前 K2P 默认用的就是闭源驱动，luci-app-mtwifi 是给别的路由器闭源驱动控制用的。K2P 是特别处理的，做了原生的luci适配
+开源是kmod-mt7615e，闭源是kmod-mt7615d
