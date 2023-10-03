@@ -28,6 +28,15 @@ sed -i 's/OpenWrt/K2P/g' package/base-files/files/bin/config_generate
 # 7.修正连接数（by ベ七秒鱼ベ）
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package/base-files/files/etc/sysctl.conf
 
+# 切换ramips内核到5.10
+# sed -i '/KERNEL_PATCHVER/cKERNEL_PATCHVER:=5.10' target/linux/ramips/Makefile
+
+# 切换ramips内核到5.15
+# sed -i '/KERNEL_PATCHVER/cKERNEL_PATCHVER:=5.15' target/linux/ramips/Makefile
+
+# 复制内核5.10版本CPU超频补丁
+# cp extra-files/322-mt7621-fix-cpu-clk-add-clkdev.patch target/linux/ramips/patches-5.10/
+
 
 
 
