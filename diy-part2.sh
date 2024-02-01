@@ -10,6 +10,7 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
+# 修订batman错误
 wget https://github.com/coolsnowwolf/lede/files/14081054/2023.3-batman-adv.tar.gz
 rm -rf feeds/routing/batman-adv
 tar -zxvf 2023.3-batman-adv.tar.gz -C feeds/routing/
