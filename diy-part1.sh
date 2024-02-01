@@ -16,15 +16,22 @@
 # Add a feed source
 # echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 
-# 目前兼容Luci18
-# echo 'ssrc-git opentopd  https://github.com/sirpdboy/luci-theme-opentopd' >>feeds.conf.default
-
 git clone --depth 1 https://github.com/ilxp/luci-app-ikoolproxy.git package/app/luci-app-ikoolproxy
 
-# rm -rf package/feeds/luci/luci-theme-argon
-# git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/feeds/luci/luci-theme-argon
-# git clone https://github.com/jerrykuku/luci-app-argon-config.git package/lean/luci-app-argon-config
+./scripts/feeds update -a
+./scripts/feeds install -a
+
+# 主题
+# git clone https://github.com/thinktip/luci-theme-neobird.git feeds/luci/themes/luci-theme-neobird
+# git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git feeds/luci/themes/luci-theme-opentomcat
+# git clone https://github.com/derisamedia/luci-theme-alpha.git feeds/luci/themes/luci-theme-alpha
+# git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon-18.06
+
 # echo '### Argon Theme Config ###'
+rm -rf feeds/luci/themes/luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
+rm -rf feeds/luci/applications/luci-app-argon-config # if have
+git clone https://github.com/jerrykuku/luci-app-argon-config.git feeds/luci/applications/luci-app-argon-config
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
