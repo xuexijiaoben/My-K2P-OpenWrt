@@ -229,7 +229,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: ${{ steps.tag.outputs.release_tag }} ${{ env.EMOJI }}
+        name: ${{ steps.tag.outputs.release_tag }} ${{ env.DEVICE_NAME }} ${{ env.EMOJI }}
         tag_name: ${{ env.OPENWRT_TAG }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
