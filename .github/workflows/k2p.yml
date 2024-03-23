@@ -243,13 +243,13 @@ jobs:
           - 🔑 Default password: password
 
     - name: Delete workflow runs
-      uses: Mattraks/delete-workflow-runs@v2.0.4
+      uses: Mattraks/delete-workflow-runs@v2.0.6
       with:
         retain_days: 7
         keep_minimum_runs: 3
 
     - name: Delete Older Releases
-      uses: dev-drprasad/delete-older-releases@v0.2.1
+      uses: dev-drprasad/delete-older-releases@v0.3.3
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       with:
         keep_latest: 5
