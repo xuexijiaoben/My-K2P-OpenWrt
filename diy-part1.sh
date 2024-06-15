@@ -19,6 +19,13 @@ git clone -b master --depth 1 https://github.com/UnblockNeteaseMusic/luci-app-un
 git clone --depth 1 https://github.com/ilxp/luci-app-ikoolproxy.git package/app/luci-app-ikoolproxy
 
 ./scripts/feeds update -a
+
+# fix : ubus_call_umdns()=ubus.c@1385
+rm package/network/services/umdns/files/umdns.init
+rm package/network/services/umdns/files/umdns.json
+wget -P package/network/services/umdns/files https://raw.githubusercontent.com/openwrt/openwrt/main/package/network/services/umdns/files/umdns.init
+wget -P package/network/services/umdns/files https://raw.githubusercontent.com/openwrt/openwrt/main/package/network/services/umdns/files/umdns.json
+
 ./scripts/feeds install -a
 
 # 主题
