@@ -37,7 +37,7 @@ sed -i "s/luci-static\/bootstrap/luci-static\/argon/g" feeds/luci/modules/luci-b
 # 6.设置ttyd免登录
 # sed -i 's/\/bin\/login/\/bin\/login -f root/' /etc/config/ttyd
 
-# 7.修正连接数（by ベ七秒鱼ベ）
+# 7.修正连接数
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package/base-files/files/etc/sysctl.conf
 
 # 切换ramips内核到5.10
@@ -53,4 +53,10 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package
 # sed -i 's/FtSupport=0/FtSupport=1/g' package/lean/mt/drivers/mt_wifi/files/mt7615.1.2G.dat
 # sed -i 's/FtSupport=0/FtSupport=1/g' package/lean/mt/drivers/mt_wifi/files/mt7615.1.5G.dat
 
-
+#Enable 802.11k/v/r
+# sed -i 's/RRMEnable=0/RRMEnable=1/g' package/kernel/mt-drivers/mt_wifi/files/mt7615.1.2G.dat
+# sed -i 's/RRMEnable=0/RRMEnable=1/g' package/kernel/mt-drivers/mt_wifi/files/mt7615.1.5G.dat
+# sed -i 's/FtSupport=0/FtSupport=1/g' package/kernel/mt-drivers/mt_wifi/files/mt7615.1.2G.dat
+# sed -i 's/FtSupport=0/FtSupport=1/g' package/kernel/mt-drivers/mt_wifi/files/mt7615.1.5G.dat
+# echo 'WNMEnable=1' >> package/kernel/mt-drivers/mt_wifi/files/mt7615.1.2G.dat
+# echo 'WNMEnable=1' >> package/kernel/mt-drivers/mt_wifi/files/mt7615.1.5G.dat
